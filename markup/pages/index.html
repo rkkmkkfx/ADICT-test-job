@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+        
+        <header class="page__header">
+            {{> header/header}}
+        </header>
+
+        <main class="page__content">
+
+            <!-- Include your modules here -->
+
+            <section class="page__content__cards page__wrapper">
+                {{> cards/cards cards.myths}}
+            </section>
+            
+            {{> textbox/textbox data.first}}
+            
+            <section class="page__content__textBox page__content__textBox-red page__wrapper">
+                <h2 class="page__content__textBox-red__heading">Что происходит на самом деле?</h2>
+            </section>
+            
+            <section class="page__content__widecard page__wrapper">
+                {{> cards/cards cards.wide.plants}}
+            </section>
+    
+            <section class="page__content__cards page__wrapper">
+                {{> cards/cards cards.animals}}
+            </section>
+    
+            <section class="page__content__widecard page__content__widecard-rtl page__wrapper">
+                {{> cards/cards cards.wide.insects}}
+            </section>
+    
+            {{> textbox/textbox data.second}}
+            
+            <section class="page__content__counters page__wrapper">
+                {{> counters/counters counters}}
+            </section>
+            
+            <section class="page__content__actions page__wrapper">
+                {{> actions/actions actions}}
+            </section>
+
+            <div class="page__buffer"></div>
+
+        </main>
+
+        <footer class="page__footer">
+            {{> footer/footer}}
+        </footer>
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+    </body>
+
+</html>

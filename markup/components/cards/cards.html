@@ -1,0 +1,21 @@
+{{#if vertical}}
+{{#if heading}}<div class="page__content__wrapper"><h2>{{heading}}</h2></div>{{/if}}
+{{#grouped_each 2 data}}
+<div class="page__content__cards__row page__content__wrapper">
+    {{#each this}}
+        <article class="page__content__card">
+            <img class="page__content__card__pic" src="{{img}}" alt="{{title}}">
+            <h3 class="page__content__card__heading">{{title}}</h3>
+            <p class="page__content__card__desc">{{{desc}}}</p>
+        </article>
+    {{/each}}
+</div>
+{{/grouped_each}}
+{{else}}
+    <div class="page__content__widecard__pic" style="background-image: url('{{img}}');">
+    </div>
+    <div class="page__content__widecard__text">
+        <h3 class="page__content__card__heading">{{title}}</h3>
+        <div class="page__content__card__desc">{{{desc}}}</div>
+    </div>
+{{/if}}

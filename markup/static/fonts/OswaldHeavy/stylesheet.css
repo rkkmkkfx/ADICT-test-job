@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'Oswald';
+	src: url('Oswald-Heavy.eot');
+	src: url('Oswald-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('Oswald-Heavy.woff2') format('woff2'),
+		url('Oswald-Heavy.woff') format('woff'),
+		url('Oswald-Heavy.ttf') format('truetype'),
+		url('Oswald-Heavy.svg#Oswald-Heavy') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}

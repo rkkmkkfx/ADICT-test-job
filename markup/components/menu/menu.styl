@@ -1,0 +1,22 @@
+.page__header__links
+    z-index 2
+    width 100%
+
+.page__menu
+    display flex
+    justify-content space-between
+
+.page__menu__item
+    flex 0 0 100%
+    font-size 14px
+    @media (min-width 960px)
+        display block
+        flex 0 0 33%
+        color #fffefe
+        line-height 30px
+        white-space nowrap
+        font-size 15px
+        &:hover
+            text-shadow 0 0 5px #1f1f1f
+    @media(min-width 1360px)
+        font-size 16px

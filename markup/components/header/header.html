@@ -1,0 +1,14 @@
+<canvas id="canvas"></canvas>
+<svg class="page__header__heading">
+    <pattern id="textmask" patternUnits="userSpaceOnUse" height="100%" width="100%">
+        <image height="100%" width="100%" xlink:href="/static/img/general/text-mask.png"></image>
+    </pattern>
+    <text x="0" y="0" dy="0" class="page__header__text" style="fill: url(#textmask)">
+        <tspan x="0" dy="1em">Почему</tspan>
+        <tspan x="0" dy="1.1em" class="page__header__heading-big">нельзя</tspan>
+        <tspan x="0.05em" dy="1.3em" class="page__header__heading-small">жечь траву</tspan>
+    </text>
+</svg>
+<div class="page__header__links">
+    {{> menu/menu menu.items}}
+</div>
