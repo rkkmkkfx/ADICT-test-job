@@ -1,13 +1,15 @@
 .page__footer
     color #fff
-    min-height 100vh
     background-image url("/static/img/general/footer__background.jpg")
     background-size cover
     background-position center
-    display flex
-    align-items center
+    margin 0
 
 .page__footer__wrapper
+    box-sizing border-box
+    display flex
+    flex-wrap wrap
+    flex-flow column
     text-align center
     mask-image url('/static/img/general/footer__mask.png')
     mask-repeat no-repeat
@@ -15,17 +17,30 @@
     mask-position center
     height 100vh
     box-sizing border-box
-    padding 108px 20%
+    padding 45px 37px
+    @media (min-width 960px)
+        padding 0 10%
+        justify-content center
+    @media (min-width 1360px)
+        padding 0 15%
     @media (min-width 1920px)
-        padding-top 220px
+        padding 0 20%
 
     h1
-        font-size 132px
-        line-height 46px
         font-family 'OswaldDemiBold', sans-serif
-        margin-top 111px
+        font-size 48px
+        line-height 60px
+        margin-top 40px
+        @media (min-width 960px)
+            font-size 105px
+            margin 105px auto 120px
+        @media (min-width 1360px)
+            margin 100px auto 160px
+            font-size 132px
         @media (min-width 1920px)
-            margin-top 205px
+            margin 130px auto
             font-size 165px
-            line-height 45px
-
+    em
+        @media (max-width 959px)
+            font-size 14px
+            line-height 22px

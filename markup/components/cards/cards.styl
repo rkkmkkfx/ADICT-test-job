@@ -6,8 +6,10 @@
 
 
 .page__content__card
-    flex 0 0 calc(50% - 30px)
     margin-bottom 60px
+    flex 0 0 100%
+    @media (min-width 960px)
+        flex 0 0 calc(50% - 15px)
     @media (min-width 1360px)
         flex 0 0 calc(50% - 45px)
     @media (min-width 1920px)
@@ -19,7 +21,11 @@
 .page__content__widecard
     display flex
     flex-wrap wrap
-    background #fff
+    @media (min-width 960px)
+        background #fff
+        min-height 750px
+    @media (min-width 1920px)
+        min-height 960px
 
     .page__content__widecard__pic
         background-size cover
@@ -34,7 +40,9 @@
     .page__content__widecard__text
         box-sizing border-box
         width 100%
-
+        padding 10px 15px
+        @media (min-width 960px)
+            padding 45px 30px
         @media (min-width 1360px)
             width 50%
             padding 30px 50px 60px 45px
@@ -52,6 +60,7 @@
 .page__content__widecard-rtl
     flex-flow row-reverse
     flex-wrap wrap
+    margin-bottom 0
 
     .page__content__widecard__pic
         background-position center
