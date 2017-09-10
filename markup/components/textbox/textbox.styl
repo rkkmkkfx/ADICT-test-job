@@ -22,7 +22,7 @@
         right -20px
         width 48px
         height 500px
-        background-image url('/static/img/general/ear-2.png')
+        background-image url('%=static=%img/general/ear-2.png')
         background-size contain
         background-repeat no-repeat
         transform rotate(90deg)
@@ -45,7 +45,7 @@
         left -10px
         width 25px
         height 500px
-        background-image url('/static/img/general/ear-1.png')
+        background-image url('%=static=%img/general/ear-1.png')
         background-size contain
         background-repeat no-repeat
         transform rotate(-90deg)
@@ -66,11 +66,14 @@
             width 1000px
 
 .page__content__textBox-second
-    background url('/static/img/general/branch-320.png') 0 100% no-repeat
+    background-image url('%=static=%img/general/branch-320.png')
+    background-position 0 100%
+    background-repeat no-repeat
+    background-size 100%
     color #1f1f1f
     align-items flex-start
     @media (min-width 960px)
-        background-image url('/static/img/general/branch.png')
+        background-image url('%=static=%img/general/branch.png')
         background-position 0 100%
         background-repeat no-repeat
         background-size 28%

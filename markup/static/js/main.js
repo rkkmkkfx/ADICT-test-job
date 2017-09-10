@@ -1,4 +1,4 @@
 'use strict';
 
-import foo from 'components/header/header';
+import header from 'components/header/header';
 

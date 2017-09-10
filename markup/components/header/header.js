@@ -81,7 +81,7 @@ smoke.prototype.update = function () {
     this.y += this.velY;
 }
 
-smokeImage.src = "/static/img/general/smoke-3.png";
+smokeImage.src = "%=static=%img/general/smoke-3.png";
 smokeImage.onload = function () {
     render();
 }
