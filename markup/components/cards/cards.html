@@ -3,7 +3,7 @@
 {{#grouped_each 2 data}}
 <div class="page__content__cards__row page__content__wrapper">
     {{#each this}}
-        <article class="page__content__card">
+        <article class="page__content__card from-{{animateFrom}}">
             <img class="page__content__card__pic" src="{{img}}" alt="{{title}}">
             <h3 class="page__content__card__heading">{{{title}}}</h3>
             <p class="page__content__card__desc">{{{desc}}}</p>

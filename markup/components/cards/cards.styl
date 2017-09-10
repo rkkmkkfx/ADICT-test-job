@@ -3,17 +3,36 @@
     align-items baseline
     flex-wrap wrap
     justify-content space-between
-
+    overflow hidden
 
 .page__content__card
     margin-bottom 60px
     flex 0 0 100%
+    transition opacity 1s, transform .5s
+    opacity 0
+    &.from-bottom
+        transform translate(0, 500px)
+    &.from-left
+        transform translate(-100vw, 0)
+    &.from-right
+        transform translate(100vw, 0)
+    &.animated
+        transition opacity 2s, transform .5s
+        transform translate(0, 0)
+        opacity 1
+
     @media (min-width 960px)
-        flex 0 0 calc(50% - 15px)
+        flex-grow 0
+        flex-shrink 0
+        flex-basis calc(50% - 15px)
     @media (min-width 1360px)
-        flex 0 0 calc(50% - 45px)
+        flex-grow 0
+        flex-shrink 0
+        flex-basis calc(50% - 45px)
     @media (min-width 1920px)
-        flex 0 0 calc(50% - 60px)
+        flex-grow 0
+        flex-shrink 0
+        flex-basis calc(50% - 60px)
 
 .page__content__card__pic
     width 100%

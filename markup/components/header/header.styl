@@ -1,6 +1,6 @@
 .page__header
     min-height 100vh
-    background-image url('%=static=%img/general/header__background.jpg')
+    background-image url('%=static=%general/header__background.jpg')
     background-size cover
     background-position center
     display flex
@@ -8,6 +8,11 @@
     flex-flow column
     overflow hidden
     position relative
+
+_:-ms-fullscreen, :root .page__header
+    min-height auto
+    height 100vh
+    width 100vw
 
 .page__header__heading
     font-size 68px

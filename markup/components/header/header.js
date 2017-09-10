@@ -1,31 +1,29 @@
 (function () {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-var canvas = document.getElementById("canvas"),
+const canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d");
 
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
 
-var parts = [],
+let parts = [],
     minSpawnTime = 100,
     lastTime = new Date().getTime(),
     maxLifeTime = Math.min(5000, (canvas.height/(1.5*60)*500)),
-    emitterX = canvas.width / 2,
     emitterY = - 1000,
     smokeImage = new Image();
 
 function spawn() {
     if (new Date().getTime() > lastTime + minSpawnTime) {
         lastTime = new Date().getTime();
-        parts.push(new smoke(- 100, emitterY));
+        parts.push(new Smoke(- 100, emitterY));
     }
 }
 
 function render() {
-    var len = parts.length;
+    let len = parts.length;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     while (len--) {
@@ -35,7 +33,7 @@ function render() {
             parts[len].update();
 
             ctx.save();
-            var offsetX = -parts[len].size/2,
+            let offsetX = -parts[len].size/2,
                 offsetY = -parts[len].size/2;
 
             ctx.translate(parts[len].x-offsetX, parts[len].y-offsetY);
@@ -49,7 +47,7 @@ function render() {
     requestAnimationFrame(render);
 }
 
-function smoke(x, y, index) {
+function Smoke(x, y) {
     this.x = x;
     this.y = y;
 
@@ -66,11 +64,11 @@ function smoke(x, y, index) {
     this.velX = Math.floor(Math.random() * (-6) + 3) / 10;
 }
 
-smoke.prototype.update = function () {
+Smoke.prototype.update = function () {
     this.lifeTime = new Date().getTime() - this.startLife;
     this.angle += 0.2;
 
-    var lifePerc = ((this.lifeTime / maxLifeTime) * 1000);
+    let lifePerc = ((this.lifeTime / maxLifeTime) * 1000);
 
     this.size = this.startSize + ((this.endSize - this.startSize) * lifePerc * .01);
 
@@ -81,7 +79,7 @@ smoke.prototype.update = function () {
     this.y += this.velY;
 }
 
-smokeImage.src = "%=static=%img/general/smoke-3.png";
+smokeImage.src = "/static/img/general/smoke-3.png";
 smokeImage.onload = function () {
     render();
 }

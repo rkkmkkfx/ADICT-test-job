@@ -76,5 +76,25 @@ em
         margin 0 10%
         max-width 80%
 
+_:-ms-fullscreen, :root .page__wrapper
+    max-width auto
+    width 287px
+    @media (min-width 960px)
+        max-width none
+        width 870px
+    @media (min-width 1360px)
+        max-width none
+        width 1230px
+    @media (min-width 1920px)
+        max-width none
+        width 1800px
+
+
+_:-ms-fullscreen, :root .page__content__wrapper
+    max-width auto
+    width 100%
+    @media (min-width 1920px)
+        max-width none
+        width 80%
 .page__wrapper-wide
-    max-width unset
+    max-width none
