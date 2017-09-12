@@ -1,14 +1,17 @@
-var data = {
+const data = {
     menu: {
         items: [
             {
-                title: 'Причины поджогов'
+                title: 'Причины поджогов',
+                href: '#reasons'
             },
             {
-                title: 'К чему это приводит'
+                title: 'К чему это приводит',
+                href: '#consequences'
             },
             {
-                title: 'Что делать в случае пожара'
+                title: 'Что делать в случае пожара',
+                href: '#actions'
             }
         ]
     }
